@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tone.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <!-- BS5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button id="playButton" type="button" class="btn btn-outline-primary">재생</button> 
+    <button id="stopButton" type="button" class="btn btn-outline-primary">정지</button>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', async () => {
+            await Tone.Transport.start()
+        });
+
+        document.getElementById('stopButton').addEventListener('click', async () => {
+            await Tone.Transport.cancel();
+            await Tone.Transport.stop(); 
+        });
+
+
+        const drum = new Tone.MembraneSynth().toDestination();
+        const hat = new Tone.MetalSynth({
+            envelope: {
+                attack : 0.01,
+                decay : 0.1,
+                release : 0.3
+            }
+        }).toDestination()
+
+        new Tone.Loop(t => {
+            drum.triggerAttackRelease("G1", "8n", t)
+            drum.triggerAttackRelease("G1", "8n", t+ 0.5)
+            drum.triggerAttackRelease("G1", "8n", t+ 1.0)
+            drum.triggerAttackRelease("G1", "8n", t+ 1.5)
+            hat.triggerAttackRelease("C1","8n", t+ 1.73)
+            hat.triggerAttackRelease("C1","8n", t+ 1.86)
+        }, 2).start(0)
+
+        const bass = new Tone.FMSynth({
+            oscillator : { type : 'amsawtooth'},
+            envelope : {
+            attack : 0.01,
+            decay : 0.1,
+            sustain : 0.8,
+            release : 0.3
+            }
+        }).toDestination()
+
+        new Tone.Loop(t => {
+            bass.triggerAttackRelease("D1", "8n", t)
+            bass.triggerAttackRelease("D2", "8n", t+0.4)
+            bass.triggerAttackRelease("D1", "8n", t+0.8)
+            bass.triggerAttackRelease("D2", "8n", t+1.2)
+            bass.triggerAttackRelease("D1", "8n", t+1.6)
+        }, 2).start(0)
+
+        const melody = new Tone.PolySynth().toDestination()
+            melody.set({
+                volume : -5,
+                oscillator : { type : 'sawtooth'},
+                envelope : {
+                attack : 0.01,
+                decay : 0.1,
+                release : 5
+            }
+        })
+
+        new Tone.Loop(t => {
+            melody.triggerAttackRelease(["C2","C4"], "8n", t)
+            melody.triggerAttackRelease("E4", "16n", t+0.4)
+            melody.triggerAttackRelease("F4", "16n", t+0.8)
+            melody.triggerAttackRelease("E4", "16n", t+1.28)
+            melody.triggerAttackRelease(["C2","C4"], "8n", t+2.0)
+            melody.triggerAttackRelease("E4", "16n", t+2.4)
+            melody.triggerAttackRelease("F4", "16n", t+2.8)
+            melody.triggerAttackRelease(["G4","C5"], "16n", t+3.28)
+        }, 4).start(0)
+
+        const high = new Tone.PolySynth().toDestination()
+        high.set({
+            volume : -12,
+            oscillator : { type : 'triangle'},
+            envelope : {
+            attack : 0.01,
+            decay : 0.1,
+            release : 5
+            }
+        })
+
+        new Tone.Loop(t => {
+            high.triggerAttackRelease("G5", "16n", t)
+            high.triggerAttackRelease("F5", "14n", t+ 0.1)
+            high.triggerAttackRelease("A6", "16n", t+ 0.2)
+            high.triggerAttackRelease("G5", "16n", t+ 0.3)
+            high.triggerAttackRelease("F5", "14n", t+ 0.4)
+            high.triggerAttackRelease("A6", "16n", t+ 0.5)
+            high.triggerAttackRelease("G5", "16n", t+ 0.6)
+            high.triggerAttackRelease("F5", "14n", t+ 0.7)
+            high.triggerAttackRelease("A6", "16n", t+ 0.8)
+        }, 2).start(0)
+
+
+
+    </script>
+
+</body>
+</html>
