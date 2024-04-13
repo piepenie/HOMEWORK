@@ -10,7 +10,27 @@ C 언어의 포인터(Pointer)는 다른 변수의 메모리 주소를 저장하
 객체를 생성하고 변수에 할당하면, 변수는 실제 객체를 직접 가리키는 것이 아니라 객체의 참조를 가지고 있습니다. 
 이것은 포인터의 개념과 유사합니다. 객체의 속성이나 메소드에 접근할 때 이 참조를 이용합니다.
 
-(2)
+ex)
+SomeObject obj = new SomeObject();
+
+(2)배열 (Arrays): 자바의 배열은 객체입니다.
+따라서 배열 변수는 배열을 직접 포인팅하지 않고 배열의 참조를 가집니다.
+
+ex)
+int[] arr = new int[10];
+
+(3)메소드 호출 시 참조 전달 (Pass-by-Reference in Method Calls): 
+자바에서 메소드에 인자를 전달할 때는 값에 의한 전달(pass-by-value)이지만, 
+참조 타입의 경우 참조가 복사되어 전달됩니다. 이것은 메소드 내에서 객체의 내용을 변경할 수 있음을 의미합니다.
+
+ex)
+public void modifyArray(int[] array) {
+    array[0] = 10;
+}
+
+int[] arr = new int[]{1, 2, 3};
+modifyArray(arr);
+// 이제 arr은 {10, 2, 3}을 가리킵니다.
 
 
 
