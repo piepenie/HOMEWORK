@@ -37,6 +37,6 @@ public class Testdb {
 		
 	    public static Connection getConn() {
 	        return conn;
-	    }  // 이부분을 수정해야함. 수정 파일은 13일에 올리도록하겠음.
+	    }  
 
 }
