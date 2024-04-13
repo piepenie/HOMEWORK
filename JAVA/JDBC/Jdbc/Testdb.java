@@ -1,4 +1,4 @@
-package Jdbc;
+package com.test;
 
 import java.beans.Statement;
 import java.sql.Connection;
@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Testdb {
+	
+	private static Connection conn; 
+	
 	public static void main(String[] args) {
 		String id;
 	 	String pw;
@@ -15,7 +18,7 @@ public class Testdb {
 		
 			id = "root";
 			pw = "1234";
-			url = "jdbc:mysql://localhost:3306/Shopping";  
+			url = "jdbc:mysql://localhost:3306/testdb";  
 			// 변수들에 값을 할당 >> DriverManager.getConnection(url, id, pw) 에 전달된 인자값을 가짐.
 			
 			try {
@@ -32,8 +35,8 @@ public class Testdb {
 			}		
 		}
 		
-		public Connection getConn() {
-			return getConn(); 
-		} // 이부분을 수정해야함. 수정 파일은 13일에 올리도록하겠음.
+	    public static Connection getConn() {
+	        return conn;
+	    }  // 이부분을 수정해야함. 수정 파일은 13일에 올리도록하겠음.
 
 }
