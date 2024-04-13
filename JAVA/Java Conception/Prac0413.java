@@ -7,10 +7,10 @@ class Person {
 	 String phoneNumber;
 	 // 멤버 변수 선언. 여기서 전역변수로 바꾸려면 public 을 달아주면된다. 
 	 //하지만, public으로 선언된 멤버 변수를 직접 접근하면 해당 변수에 어떤 값이든 할당할 수 있으므로 
-	 //데이터 무결성과 캡슐화의 원칙을 위배할 수 있습니다. 
+	 //데이터 무결성과 캡슐화의 원칙을 위배할 수 있음. 
 	 //따라서 주의해서 사용해야 합니다. 일반적으로는 멤버 변수를 private으로 선언하고, 
 	 //외부에서 접근할 수 있도록 Getter와 Setter 메소드를 제공하는 것이 더 안전하고 좋은 
-	 //프로그래밍 실천법입니다.
+	 //프로그래밍 실천법
 	
 	 //생성자 정의
 	public Person(String name, int age, String phoneNumber) {
