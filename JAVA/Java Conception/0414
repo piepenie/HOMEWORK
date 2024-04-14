@@ -1,0 +1,20 @@
+public class Application {
+
+	public static void main(String[] args) throws Exception { 
+		
+		FrontController frontController =  new FrontController(); // 프론트 컨트롤러 생성자 호출
+		Map<String,Object> params = new HashMap(); // 키가 문자열, 값이 객체인 데이터를 저장하는 맵을 생성, 변수 params에 할당 
+		params.put("bookDto",new BookDto(5241,"JAVA의정석","EASY","111-111")); // params에 주소 bookdDto 에 new BookDto()값을 넣음
+		// 여기서 new BookDto를 호출? 해서 값을 받는것 
+		 Map<String, Object> resultMap = frontController.execute("/book", 1, params); 
+		 // 이건 맵 결과라는 변수에 프론트 컨트롤러가 실행됫을때의 값을 넣었는지 안넣었는지 확인하려고 만든 코드
+		 boolean response = (boolean) resultMap.get("response"); 
+		 // 논리연산자형 변수 response 에 resultMap이 "응답값"을 받고
+		 System.out.println("response : " + response); 
+		 if(response == true) { // 해당 응답값이 들어왓으면 성공, 아니면 실패
+			 System.out.println("성공입니다.");
+		 } else {
+			 System.out.println("실패입니다.");
+		 }
+  } 
+}
