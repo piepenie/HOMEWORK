@@ -33,7 +33,6 @@ modifyArray(arr);
 // 이제 arr은 {10, 2, 3}을 가리킵니다.
 
 
-
 cf)
 1)생성자는 객체를 초기화하는 특별한 종류의 메소드. 
 자바에서 객체를 생성할 때는 해당 클래스의 생성자를 호출하여 객체를 초기화합니다.
@@ -44,16 +43,70 @@ cf)
 인스턴스 변수라고도 부름. 객체의 상태값을 저장하며, 접근제어자(private,protected,public)로 제어하여
 외부에서 접근을 제한함
 
+ex)
+public class Car {
+    // 멤버 변수
+    private String color;
+    private int speed;
+
+    // 생성자, 메서드 등 생략
+}
+
 지역 변수 
 메서드, 생성자 또는 블록 내에서 선언되는 변수로, 해당 범위 내에서만 사용할 수 있음
 
-전역 변수
+ex)
+public class Calculator {
+    // 메서드
+    public int add(int a, int b) {
+        // 지역 변수
+        int result = a + b;
+        return result;
+    }
+}
 
+전역 변수(=클래스 변수)
+클래스 내에 선언되지만, 메서드 내부가 아닌 클래스 전체에서 사용할 수 있음
+하나의 클래스에 대해 하나의 값만 유지, 해당 클래스의 모든 인스턴스가 공유 
+전역 변수는 모든 메서드에서 사용 가능
+
+ex)
+public class Circle {
+    // 전역 변수
+    public static final double PI = 3.14;
+    private double radius;
+
+    // 생성자, 메서드 등 생략
+}
 
 매개 변수(=파라미터)
 
 참조 변수
-객체를 가리키는 변수입니다. 
+객체를 가리키는 변수입니다. 객체의 주소를 저장
+객체를 생성할 때 사용되며, 해당 객체의 멤버 변수나 메서드에 접근할 수 있게 합니다.
+
+ex)
+public class Student {
+    // 멤버 변수
+    private String name;
+    private int age;
+
+    // 생성자, 메서드 등 생략
+
+    public void printInfo() {
+        System.out.println("이름: " + name + ", 나이: " + age);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        // 참조 변수
+        Student student1 = new Student();
+
+        student1.name = "John";
+        student1.age = 20;
+        student1.printInfo();
+    }
+}
 
 객체 자체는 메모리에서 실제로 할당된 인스턴스입니다.
 인스턴스란 클래스의 실체화된 형태로, 클래스를 기반으로 생성된 객체를 나타낸다. 
