@@ -56,7 +56,6 @@ ex)
     	    System.out.println("Index " + i + ": bigArray[" + i + "] = " + bigArray[i] + 
     	    		", smallArray[" + i + "] = " + smallArray[i]);
     	}
-    	
 
+// 이부분이 헷갈림.
 
-ex)
