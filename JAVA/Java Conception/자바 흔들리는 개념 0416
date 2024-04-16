@@ -8,7 +8,7 @@ ex) long bigValue = 10000000000L;
 		System.out.println("smallValue : " + smallValue);
 
 result)		bigValue : 10000000000
-          smallValue : 1410065408
+          	smallValue : 1410065408
 
 
 
@@ -21,7 +21,7 @@ ex) int number = 65;
 		System.out.println(result);
 
 result)		A
-          A
+         	A
 
 (3)연산과 계산의 유연성 : 연산을 수행하기 위해 일시적으로 변환
 
