@@ -25,11 +25,38 @@ result)		A
 
 (3)연산과 계산의 유연성 : 연산을 수행하기 위해 일시적으로 변환
 
-ex) int intValue = 10;
-    double doubleValue = 3.5;
-    double result = intValue + doubleValue; // 정수와 부동 소수점 연산을 위해 정수가 부동 소수점으로 자동 변환됨
+ex)		
+	int intValue = 10;
+	double doubleValue = 3.5;
+	double result1 = intValue + doubleValue; // 정수와 부동 소수점 연산을 위해 정수가 부동 소수점으로 자동 변환됨
+    	System.out.println(result1);
+    	
+    	int intValue1 = 10;
+    	float floatValue = 3.5f;
+    	float result2 = intValue1 + floatValue;
+    	System.out.println(result2);
+    	
+    	int intValue2 = 10;
+    	double doubleValue1 = 3.5;
+    	float result3 = (float) (intValue2 + doubleValue1); //  명시적 형변환 또는 캐스팅 이라고 함
+      //double result3 = intValue2 + doubleValue1; // 결과3 의 형을 더블로 잡아줘도 가능함
+    	System.out.println(result3);
+
+result)		13.5
+         	13.5
+		13.5
 
 (4)메모리 관리 : 메모리 사용량 최적화위해 자료형 변환
+
+ex)
+    	int[] bigArray = new int[1000];
+    	byte[] smallArray = new byte[1000];
+    	for (int i = 0; i < 1000; i++) {
+    	    smallArray[i] = (byte) bigArray[i]; // 데이터 손실이 발생할 수 있음
+    	    System.out.println("Index " + i + ": bigArray[" + i + "] = " + bigArray[i] + 
+    	    		", smallArray[" + i + "] = " + smallArray[i]);
+    	}
+    	
 
 
 ex)
