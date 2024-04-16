@@ -2,12 +2,30 @@
 클래스의 인스턴스를 생성할 때 호출되며, 인스턴스 변수를 초기화하고 객체의 상태를 설정하는 데 사용됨
 
 ex)
-public class MyClass {
 
+public class MyClass {
     // 기본 생성자
-    public MyClass(){}
+    public MyClass(){
+    	System.out.println("기본 생성자 호출");
+    }
         
     // 매개변수가 있는 생성자
     public MyClass(int param1, String param2) {
+    	System.out.println("매개변수가 있는 생성자 호출됨");
+    	System.out.println("param1 : " + param1 + ", param2 : " + param2);
+    }
+    
+    public static void main(String[] args) {
+    	
+    	MyClass obj1 = new MyClass();
+    	
+    	
+    	MyClass obj2 = new MyClass(10, "Hello");
+    	
     }
 }
+
+Resutl) 
+기본 생성자 호출
+매개변수가 있는 생성자 호출됨
+param1 : 10, param2 : Hello (여기서 한줄 띄어서 표현하고싶으면 \n 해주면 될듯?
