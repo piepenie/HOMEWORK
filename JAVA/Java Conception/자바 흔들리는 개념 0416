@@ -1,1 +1,35 @@
-형변환 
+1) 형변환 
+데이터를 다른 형식으로 변환하거나 호환성을 유지하기 위해 사용됨.
+(1)데이터 손실 방지 : 큰 자료형을 작은 자료형으로 형변환하여 메모리를 절약 가능
+   다만 이 경우 데이터 손실이 발생할 수 있음.
+ex) long bigValue = 10000000000L;
+    int smallValue = (int) bigValue; // 데이터 손실이 발생할 수 있음
+		System.out.println("bigValue : " + bigValue);
+		System.out.println("smallValue : " + smallValue);
+
+result)		bigValue : 10000000000
+          smallValue : 1410065408
+
+
+
+(2)다른 자료형 간 호환성 : 서로 다른 자료형 간에 형변환을 통해 데이터를 교환하고 처리할 수 있음
+
+ex) int number = 65;
+    char character = (char) number; // 'A'
+    String result = String.valueOf(character); // "A"
+		System.out.println(character);
+		System.out.println(result);
+
+result)		A
+          A
+
+(3)연산과 계산의 유연성 : 연산을 수행하기 위해 일시적으로 변환
+
+ex) int intValue = 10;
+    double doubleValue = 3.5;
+    double result = intValue + doubleValue; // 정수와 부동 소수점 연산을 위해 정수가 부동 소수점으로 자동 변환됨
+
+(4)메모리 관리 : 메모리 사용량 최적화위해 자료형 변환
+
+
+ex)
