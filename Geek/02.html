@@ -1,1 +1,10 @@
 블렌더 파일과 Three.js 를 연결해야됨
+
+import { useGLTF } from "@react-three/drei";
+import { useLoader } from "@react-three/fiber";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+
+export default function BoxLoader() {
+  const gltf = useLoader(GLTFLoader, "/dice.glb");
+  return <primitive object={gltf.scene} />;
+}
