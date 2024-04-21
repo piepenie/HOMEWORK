@@ -17,3 +17,61 @@ Redirect 는 요청을 웹 브라우저에게 전달하여 새로 요청하게 �
 
 해당 링크 그림을 참고하면 좋다
 https://dev-handbook.tistory.com/35
+
+01. 선언문
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+	선언문(서블릿으로 변환되는 자바파일의 속성/기능(함수) 추가)
+ -->
+ 	<%!
+ 		String name = "Hong gil dong";
+ 		public String testFunc(){
+ 			System.out.println("선언문 TEST");
+ 			return "HELLO WORLD";
+ 		}
+ 	%>
+ 	
+<!--
+		표현식(HTML 로 표시/표현할 때 사용되는 코드)
+  -->
+ 	<%=name %><br>
+ 	<%=testFunc() %><br>
+
+<!--
+		F5 새로고침 할 때마다 카운트가 올라감.  
+  -->
+<%!
+	int a = 0;
+	public int countUp(){
+		a++;
+		return a;
+	}
+	
+%>
+
+a: <%=countUp() %> <br/>
+
+<%!
+	// x 
+/* 	
+for(int i=0; i<10; i++){
+		System.out.print("HELLO WORDL");
+	} 
+*/
+
+%>
+
+ 	
+
+</body>
+</html>
