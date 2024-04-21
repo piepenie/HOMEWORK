@@ -21,34 +21,3 @@ ServletContext:
 ServletContext는 웹 애플리케이션의 컨텍스트 정보를 나타내는 객체입니다. 서버의 모든 JSP 페이지 및 Servlet에 대한 공통 정보를 저장하고, 
 이를 공유하는 데 사용됩니다. 예를 들어, 웹 애플리케이션의 초기화 매개변수, 리소스의 절대 경로, 서버 정보 등을 ServletContext에 저장하여 
 애플리케이션 전체에서 접근 가능하게 할 수 있습니다.
-
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-<!-- 
-	선언문(서블릿으로 변환되는 자바파일의 속성/기능(함수) 추가)
- -->
- 	<%!
- 		String name = "Hong gil dong";
- 		public String testFunc(){
- 			System.out.println("선언문 TEST");
- 			return "HELLO WORLD";
- 		}
- 	%>
- 	
-<!--
-		표현식(HTML 로 표시/표현할 때 사용되는 코드)
-  -->
- 	<%=name %><br>
- 	<%=testFunc() %><br>
- 	
-
-</body>
-</html>
