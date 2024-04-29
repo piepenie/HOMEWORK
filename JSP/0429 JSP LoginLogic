@@ -1,0 +1,20 @@
+view >> Fc >> Sb >service >> Dao >> DB
+
+view >> Fc프론트컨트롤러 >> Sb서브컨트롤러 >service >> Dao >> DB
+
+컨트롤러한테 여러가지 정보를 전달할때 Map 을 사용
+
+참고 MVC Lnd 
+
+Session Dto S_id
+
+S_Id 
+
+★중요로직
+브라우저 			     서버 				DB
+	>>로그인요청(POST) FC >> UserLoginConetroller
+				>>UserService.login
+				>> SessionDto 생성
+				>> Table 저장
+				>> Session 에 저장
+				>> 쿠키(sessionId)전달
