@@ -24,3 +24,10 @@ URL로 직접 접근할 수 없음
 >> 요청된 JSP/Servle을 실행하고 결과를 돌려주는 서버
 >> 대표적인게 톰캣(TOMCAT)
 
+Servlet 은 하나의 인스턴스에 여러 Thread가 동작하는
+Multi-Thread 방식
+main() 메소드를 구현하지않으며, 
+Servlet Container에 의해 실행되고 관리됨
+
+Servlet 의 기본은 
+Request / Response
