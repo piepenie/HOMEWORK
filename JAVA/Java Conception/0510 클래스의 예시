@@ -1,0 +1,64 @@
+클래스의 예
+클래스(class)
+
+- 차(Car) : 설계도
+
+필드(field)
+- car.modelName = "람보르기니"
+- car.modelYear = 2016
+- car.color = "주황색"
+- car.maxSpeed = 350
+
+메소드(method)
+- car.accelerate()
+- car.brake()
+
+인스턴스(instance)
+- 내 차(myCar) : 설계도에 의해 생산된 차량
+- 친구 차(friendCar) : 설계도에 의해 생산된 또 다른 차량
+
+즉, 자동차 인스턴스는 모두 위와 같은 필드와 메소드를 가지게 될 것입니다.
+하지만 각 인스턴스마다 가지고 있는 프로퍼티의 값은 전부 다를 것입니다.
+를 코드로 표현해본 결과다.
+
+
+package Ch99;
+public class Car {
+    // 필드
+    String modelName;
+    int modelYear;
+    String color;
+    int maxSpeed;
+
+    // 생성자
+    public Car(String modelName, int modelYear, String color, int maxSpeed) {
+        this.modelName = modelName;
+        this.modelYear = modelYear;
+        this.color = color;
+        this.maxSpeed = maxSpeed;
+    }
+    // 메소드
+    public void accelerate() {
+        System.out.println(modelName + "이(가) 가속합니다.");
+    }
+
+    public void brake() {
+        System.out.println(modelName + "이(가) 브레이크를 밟습니다.");
+    }
+
+    public static void main(String[] args) {
+        // 인스턴스 생성
+        Car myCar = new Car("람보르기니", 2016, "주황색", 350);
+        Car friendCar = new Car("페라리", 2018, "빨간색", 380);
+
+        // 메소드 호출
+        myCar.accelerate();
+        friendCar.brake();
+
+        // 필드 접근
+        System.out.println("내 차 모델명: " + myCar.modelName);
+        System.out.println("친구 차 모델명: " + friendCar.modelName);
+    }
+}
+
+ 
