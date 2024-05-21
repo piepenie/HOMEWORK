@@ -6,3 +6,17 @@ JSTL
 
 @Component
 빈으로 등록하고 싶은 클래스
+
+@Controller 어노테이션 안에는
+@Component가 내부적으로 이미 등록 되어있기에,
+Controller를 명시하는 것만으로도 바로 Spring IoC 컨테이너의 Bean으로 등록됨
+
+Jackson 
+JSON 파일을 사용하기 위한 라이브러리 
+
+JSON 
+
+
+getter 
+
+setter 
