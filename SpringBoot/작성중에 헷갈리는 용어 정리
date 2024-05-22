@@ -33,3 +33,6 @@ GET , POST
 
 참고 출처(Query string과 Path Variable)
 https://velog.io/@jcinsh/Query-string-path-variable
+
+참고 출처(Query parameter, Query String vs Path Variable)
+https://i-ten.tistory.com/243
