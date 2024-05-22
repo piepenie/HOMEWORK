@@ -31,5 +31,5 @@ End Point 란
 GET , POST 
 데이터를 전송하기 위해 GET, 전송 받기 위해 POST 방식
 
-
+참고 출처(Query string과 Path Variable)
 https://velog.io/@jcinsh/Query-string-path-variable
