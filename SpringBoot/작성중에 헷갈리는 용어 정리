@@ -27,3 +27,6 @@ setter
 
 End Point 란 
 어디(End-point)에 요청할 것인지 결정하는거 URL 관련 키워드
+
+GET , POST 
+데이터를 전송하기 위해 GET, 전송 받기 위해 POST 방식
