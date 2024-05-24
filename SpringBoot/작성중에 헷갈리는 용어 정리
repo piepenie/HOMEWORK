@@ -19,6 +19,12 @@ JSON
 
 undefined는 사용 불가능하고 큰따옴표만 허용되니까 주의!
 
+API 와 Endpoint의 차이 한 줄 정리
+
+API가 두 시스템(어플리케이션)이 상호작용할 수 있게 하는 프로토콜의 총집합이라면,
+
+ENDPOINT는 API가 서버에서 리소스에 접근할 수 있도록 가능하게 하는 URL이라 할 수 있겠다.
+
 
 getter 
 
@@ -41,3 +47,6 @@ https://velog.io/@jcinsh/Query-string-path-variable
 
 참고 출처(Query parameter, Query String vs Path Variable)
 https://i-ten.tistory.com/243
+
+참고 출처(API 와 Endpoint)
+https://blog.naver.com/ghdalswl77/222401162545
