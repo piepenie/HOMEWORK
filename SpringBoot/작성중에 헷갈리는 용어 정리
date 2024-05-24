@@ -15,6 +15,9 @@ Jackson
 JSON 파일을 사용하기 위한 라이브러리 
 
 JSON 
+일반적인 객체 형식과 비슷하지만, JSON은 통신 등을 위해 데이터를 가볍게 만든 문자데이터!
+
+undefined는 사용 불가능하고 큰따옴표만 허용되니까 주의!
 
 
 getter 
@@ -30,6 +33,8 @@ End Point 란
 
 GET , POST 
 데이터를 전송하기 위해 GET, 전송 받기 위해 POST 방식
+
+
 
 참고 출처(Query string과 Path Variable)
 https://velog.io/@jcinsh/Query-string-path-variable
