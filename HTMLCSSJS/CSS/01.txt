@@ -1,0 +1,14 @@
+CSS 
+
+> Rule set : css 의 전체 구조를 칭함
+p { color: red; } 
+
+선택자(selector) 
+= p : html 요소 이름
+
+속성(property)
+= color : p 요소의 속성을 의미
+
+속성 값(property value)
+= red : color 의 속성 값을 의미
+
