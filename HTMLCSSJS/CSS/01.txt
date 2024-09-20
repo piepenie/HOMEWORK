@@ -12,3 +12,12 @@ p { color: red; }
 속성 값(property value)
 = red : color 의 속성 값을 의미
 
+padding, 컨텐트 주위의 공간 (예, 문단 글자의 주위)
+border, padding 의 바깥쪽에 놓인 실선
+margin, 요소의 바깥쪽을 둘러싼 공간
+
+width (한 요소의 너비)
+background-color, 요소의 콘텐츠와 padding 의 배경 색
+color, 한 요소의 콘텐츠 색 (일반적으로 글자색)
+text-shadow: 한 요소 안의 글자에 그림자를 적용
+display: 요소의 표시 형식을 설정합니다
